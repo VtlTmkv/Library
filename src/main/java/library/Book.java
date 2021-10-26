@@ -4,13 +4,12 @@ import lombok.Data;
 
 public @Data
 class Book {
-    private String title;
-    private String author;
-    private int year;
+    private Author author;
+    private String name;
 
     @Override
     public String toString(){
-        return "Book: "+author+" \""+title+"\" "+year;
+        return "Book: "+author+" \""+name+"\"";
     }
 
 }

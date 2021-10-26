@@ -1,5 +1,7 @@
 package library;
 
+import javax.inject.Inject;
+import java.io.File;
 import java.util.Scanner;
 
 public class LibraryFactory {
@@ -8,7 +10,8 @@ public class LibraryFactory {
     public Library createLibrary(int cells){
         System.out.println("Введите путь к файлу");
         path=scan.nextLine();
-        Library lib=new Library(cells, new FileBooksFactory(path));
+        FileBooksFactory fbf = new FileBooksFactory(path);
+        Library lib=new Library(cells, fbf);
         return lib;
     }
 }
