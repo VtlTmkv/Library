@@ -5,7 +5,6 @@ import com.google.inject.Injector;
 import org.jetbrains.annotations.NotNull;
 
 
-import java.time.Instant;
 import java.util.Scanner;
 
 public class Main {
